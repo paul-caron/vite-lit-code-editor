@@ -12,6 +12,7 @@ import {query} from 'lit/decorators/query.js';
 
 import codeEditorCSS from './code-editor.css?inline' ;
 
+import Connect from './connect.ts' ; 
 
 @customElement('code-editor')
 export class CodeEditor extends LitElement {
@@ -62,7 +63,7 @@ export class CodeEditor extends LitElement {
   }
 
   run(){
-
+    Connect(this.text, this.language);
   }
 
   textAreaTemplate(){
